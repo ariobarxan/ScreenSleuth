@@ -21,4 +21,6 @@
 - [ ] Saving the favorite movies
 - [ ] UI Test
 - [ ] Unit Test
-
+- [ ] Implement Coordinator
+    - [x] Base coordinator
+    - [ ] Manage child coordinators
