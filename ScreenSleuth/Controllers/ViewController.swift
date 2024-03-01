@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController, StoryBoarded {
 
+    weak var coordinator: Coordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
