@@ -8,42 +8,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial View Controller-->
+        <!--Search Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="InitialViewController" id="BYZ-38-t0r" customClass="InitialViewController" customModule="ScreenSleuth" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchMovieViewController" id="BYZ-38-t0r" customClass="SearchMovieViewController" customModule="ScreenSleuth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCH-3r-6Jn">
-                                <rect key="frame" x="76.666666666666686" y="362" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUm-oO-wtd">
+                                <rect key="frame" x="0.0" y="50" width="393" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smF-Aw-a5T">
+                                        <rect key="frame" x="16" y="5" width="361" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Wlm-cR-qrQ"/>
-                                    <constraint firstAttribute="height" constant="128" id="weP-I4-E1f"/>
+                                    <constraint firstAttribute="bottom" secondItem="smF-Aw-a5T" secondAttribute="bottom" constant="5" id="4Ob-ml-xir"/>
+                                    <constraint firstAttribute="trailing" secondItem="smF-Aw-a5T" secondAttribute="trailing" constant="16" id="Ax3-Yw-Nn2"/>
+                                    <constraint firstAttribute="height" constant="70" id="Mz4-Wf-UBe"/>
+                                    <constraint firstItem="smF-Aw-a5T" firstAttribute="top" secondItem="MUm-oO-wtd" secondAttribute="top" constant="5" id="PTy-5Z-TXg"/>
+                                    <constraint firstItem="smF-Aw-a5T" firstAttribute="leading" secondItem="MUm-oO-wtd" secondAttribute="leading" constant="16" id="VX1-Zr-E12"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c3m-cB-vWB">
+                                <rect key="frame" x="0.0" y="120" width="393" height="732"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BCH-3r-6Jn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YwF-PF-oiX"/>
-                            <constraint firstItem="BCH-3r-6Jn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wua-dw-LGK"/>
+                            <constraint firstItem="c3m-cB-vWB" firstAttribute="top" secondItem="MUm-oO-wtd" secondAttribute="bottom" id="78l-s8-B0e"/>
+                            <constraint firstItem="MUm-oO-wtd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="NZX-AR-zIT"/>
+                            <constraint firstAttribute="bottom" secondItem="c3m-cB-vWB" secondAttribute="bottom" id="Xxd-dz-ReT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3m-cB-vWB" secondAttribute="trailing" id="aS0-dj-M52"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUm-oO-wtd" secondAttribute="trailing" id="efR-Lu-q2H"/>
+                            <constraint firstItem="c3m-cB-vWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sCn-Sh-CoI"/>
+                            <constraint firstItem="MUm-oO-wtd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uva-er-duM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerContainer" destination="MUm-oO-wtd" id="z4u-m5-sbv"/>
+                        <outlet property="headerContainerTopConstraint" destination="NZX-AR-zIT" id="TEG-Ag-cjc"/>
+                        <outlet property="movieTableView" destination="c3m-cB-vWB" id="RgF-CK-1X1"/>
+                        <outlet property="searchTextField" destination="smF-Aw-a5T" id="KCO-xe-8Lj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

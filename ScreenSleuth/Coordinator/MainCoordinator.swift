@@ -18,7 +18,7 @@ final class MainCoordinator: NSObject, Coordinator {
     
     func start() {
         navigationController.delegate = self
-        let vc = InitialViewController.instantiate(.Main)
+        let vc = SearchMovieViewController.instantiate(.Main)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
