@@ -25,3 +25,5 @@
     - [x] Base coordinator
     - [ ] Manage child coordinators
 - [ ] UI Constraint Auto layout
+- [ ] Implement Network layer
+- [ ] Implement Network Monitoring
