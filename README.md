@@ -27,3 +27,4 @@
 - [ ] UI Constraint Auto layout
 - [ ] Implement Network layer
 - [ ] Implement Network Monitoring
+- [ ] Implement a logger

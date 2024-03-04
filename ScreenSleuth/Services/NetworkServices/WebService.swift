@@ -11,6 +11,11 @@ final class WebService {
     
     static let shared = WebService()
    
+    func authenticate() async throws -> Data {
+        return try await baseRequest(forRequest: .authenticate, type: Data.self)
+    }
+    
+    
     private func baseRequest<T: Codable>(forRequest requestManager: RequestManager, type: T.Type) async throws -> T {
         let data = try await baseRequestGetData(requestManager)
         return try baseRequestDecodeData(data, for: type)
@@ -55,3 +60,4 @@ final class WebService {
     }
     
 }
+

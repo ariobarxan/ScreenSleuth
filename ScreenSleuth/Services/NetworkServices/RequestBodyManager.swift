@@ -7,9 +7,13 @@
 
 import Foundation
 
-final class RequestBodyManager {
+enum RequestBodyManager {
         
-    func getBody(for request: RequestManager) -> [String: Any]? {
+    
+}
+
+extension RequestBodyManager {
+    static func getBody(for request: RequestManager) -> [String: Any]? {
         switch request {
         default:
             nil

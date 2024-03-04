@@ -9,17 +9,17 @@ import Foundation
 
 enum RequestManager {
     
-    
+    case authenticate
     
     func asURLRequest() throws -> URLRequest {
-        guard let url = RequestURLManager.shared.getURL(for: self) else {
+        guard let url = RequestURLManager.getURL(for: self) else {
             throw NetworkError.invalidURLString
         }
         
         var urlRequest = URLRequest(url: url)
         var urlComponents = URLComponents(string: "\(urlRequest)")
         //MARK: - Adding Query Parameters
-        if let parameters = RequestQueryParamManager.shared.getQueryParam(for: self) {
+        if let parameters = RequestQueryParamManager.getQueryParam(for: self) {
             var params = [URLQueryItem]()
             parameters.keys.forEach({ key in
                 params.append(URLQueryItem(name: key, value: "\(parameters[key]!)"))
@@ -33,12 +33,12 @@ enum RequestManager {
         
         //MARK: - Adding Body
         urlRequest = URLRequest(url: (urlComponents?.url)!)
-        if let body = RequestBodyManager.shared.getBody(for: self) {
+        if let body = RequestBodyManager.getBody(for: self) {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: body)
         }
         
         //MARK: - Adding Header
-        let headers = RequestHeaderManager.shared.getHeader(for: self)
+        let headers = RequestHeaderManager.getHeader(for: self)
         headers.forEach { header in
             urlRequest.setValue(header.value, forHTTPHeaderField: header.field)
         }

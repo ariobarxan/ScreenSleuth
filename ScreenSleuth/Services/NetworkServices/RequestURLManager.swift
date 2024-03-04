@@ -9,16 +9,19 @@ import Foundation
 
 enum RequestURLManager {
     
-    var baseURL: String {
+    static var baseURL: String {
         get {
-            return "https://api.spacexdata.com/v5/launches/"
+            return "https://api.themoviedb.org/3/movie/11?api_key=126cb736c2d6c5dcb3aa726b1e16f81e"
         }
     }
+}
+
+extension RequestURLManager {
     
-    func getURL(for request : RequestManager) -> URL? {
+    static func getURL(for request : RequestManager) -> URL? {
         switch request {
         default:
-            return URL(string: baseURL)
+            return URL(string: RequestURLManager.baseURL)
         }
     }
 }

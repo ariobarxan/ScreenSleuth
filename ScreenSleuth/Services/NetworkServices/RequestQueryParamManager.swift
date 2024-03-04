@@ -7,11 +7,12 @@
 
 import Foundation
 
-final class RequestQueryParamManager {
-    
-    static let shared = RequestQueryParamManager()
-    
-    func getQueryParam(for request: RequestManager) -> [String: String]? {
+enum RequestQueryParamManager {
+        
+}
+
+extension RequestQueryParamManager {
+    static func getQueryParam(for request: RequestManager) -> [String: String]? {
         switch request {
         default:
             return nil

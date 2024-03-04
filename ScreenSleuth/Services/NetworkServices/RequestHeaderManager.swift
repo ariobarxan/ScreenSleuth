@@ -16,8 +16,11 @@ enum RequestHeaderManager {
     enum HTTPDefaultHeaderValue: String {
         case json = "application/json"
     }
+}
 
-    func getHeader(for request: RequestManager) -> [(value: String, field: String)] {
+extension RequestHeaderManager {
+    
+    static func getHeader(for request: RequestManager) -> [(value: String, field: String)] {
         let contentTypeValue = HTTPDefaultHeaderValue.json.rawValue
         let contentTypeField = HTTPDefaultHeaderField.contentType.rawValue
         let defaultHeaders = [(value: contentTypeValue, field:contentTypeField)]
@@ -27,5 +30,6 @@ enum RequestHeaderManager {
             return  defaultHeaders
         }
     }
+
 
 }
