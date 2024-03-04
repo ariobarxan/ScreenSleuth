@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+final class RequestBodyManager {
+        
+    func getBody(for request: RequestManager) -> [String: Any]? {
+        switch request {
+        default:
+            nil
+        }
+    }
+}

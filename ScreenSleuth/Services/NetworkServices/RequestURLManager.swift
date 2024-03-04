@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+enum RequestURLManager {
+    
+    var baseURL: String {
+        get {
+            return "https://api.spacexdata.com/v5/launches/"
+        }
+    }
+    
+    func getURL(for request : RequestManager) -> URL? {
+        switch request {
+        default:
+            return URL(string: baseURL)
+        }
+    }
+}

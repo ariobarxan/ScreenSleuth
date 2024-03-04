@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+enum RequestMethodManager: String {
+    case post = "POST"
+    case get = "GET"
+    case put = "PUT"
+    case patch = "PATCH"
+    case delete = "DELETE"
+}
+
+extension RequestMethodManager {
+    
+    static func getHTTPMethod(for request: RequestManager) -> String {
+        switch request {
+        default:
+            return RequestMethodManager.post.rawValue
+            
+        }
+    }
+}
