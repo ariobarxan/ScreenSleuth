@@ -16,6 +16,7 @@
 		F4A8A2452B941AA5001F57BE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A2442B941AA5001F57BE /* WebService.swift */; };
 		F4A8A2472B941AB5001F57BE /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A2462B941AB5001F57BE /* NetworkErrors.swift */; };
 		F4A8A2492B941ACD001F57BE /* NetworkMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A2482B941ACD001F57BE /* NetworkMonitorService.swift */; };
+		F4AD1F3A2B9572E300369ED4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD1F392B9572E300369ED4 /* Logger.swift */; };
 		F4FC68912B9168C00012E8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC68902B9168C00012E8C4 /* AppDelegate.swift */; };
 		F4FC68932B9168C00012E8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC68922B9168C00012E8C4 /* SceneDelegate.swift */; };
 		F4FC68952B9168C00012E8C4 /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC68942B9168C00012E8C4 /* SearchMovieViewController.swift */; };
@@ -39,6 +40,7 @@
 		F4A8A2442B941AA5001F57BE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F4A8A2462B941AB5001F57BE /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		F4A8A2482B941ACD001F57BE /* NetworkMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorService.swift; sourceTree = "<group>"; };
+		F4AD1F392B9572E300369ED4 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F4FC688D2B9168C00012E8C4 /* ScreenSleuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenSleuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FC68902B9168C00012E8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4FC68922B9168C00012E8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 				F4A8A2482B941ACD001F57BE /* NetworkMonitorService.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		F4AD1F382B9572C900369ED4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD1F392B9572E300369ED4 /* Logger.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F4FC68842B9168C00012E8C4 = {
@@ -168,6 +178,7 @@
 		F4FC68AD2B91725D0012E8C4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F4AD1F382B9572C900369ED4 /* Utils */,
 				F4FC68AE2B91726F0012E8C4 /* Extensions */,
 			);
 			path = Helpers;
@@ -261,6 +272,7 @@
 				F4A8A2472B941AB5001F57BE /* NetworkErrors.swift in Sources */,
 				F4A8A23B2B941A28001F57BE /* RequestMethodManager.swift in Sources */,
 				F4FC68912B9168C00012E8C4 /* AppDelegate.swift in Sources */,
+				F4AD1F3A2B9572E300369ED4 /* Logger.swift in Sources */,
 				F4A8A2392B941A1B001F57BE /* RequestManager.swift in Sources */,
 				F4A8A2492B941ACD001F57BE /* NetworkMonitorService.swift in Sources */,
 				F4FC68B22B9172BC0012E8C4 /* CoordinatorProtocol.swift in Sources */,

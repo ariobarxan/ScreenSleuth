@@ -19,6 +19,10 @@ class SearchMovieViewController: UIViewController, StoryBoarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Task {
+            try await WebService.shared.authenticate()
+        }
     }
 
 
