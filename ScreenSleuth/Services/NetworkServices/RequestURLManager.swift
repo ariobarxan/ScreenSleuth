@@ -11,7 +11,7 @@ enum RequestURLManager {
     
     static var baseURL: String {
         get {
-            return "https://api.themoviedb.org/3/movie/11?api_key=126cb736c2d6c5dcb3aa726b1e16f81e"
+            return "https://api.themoviedb.org/3/movie/"
         }
     }
 }
@@ -20,8 +20,8 @@ extension RequestURLManager {
     
     static func getURL(for request : RequestManager) -> URL? {
         switch request {
-        default:
-            return URL(string: RequestURLManager.baseURL)
+        case .popularMovies, .authenticate:
+            return URL(string: RequestURLManager.baseURL + "popular?language=en-US&page=1")
         }
     }
 }

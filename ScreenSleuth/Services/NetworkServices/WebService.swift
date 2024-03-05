@@ -15,8 +15,11 @@ final class WebService {
         return try await baseRequest(forRequest: .authenticate, type: Data.self)
     }
     
+    func getPopularMovies(forPage page: Int) async throws -> PopularMoviesPage {
+        return try await baseRequest(forRequest: .popularMovies(page: page), type: PopularMoviesPage.self)
+    }
     
-    private func baseRequest<T: Codable>(forRequest requestManager: RequestManager, type: T.Type) async throws -> T {
+    private func baseRequest<T: Decodable>(forRequest requestManager: RequestManager, type: T.Type) async throws -> T {
         let data = try await baseRequestGetData(requestManager)
         return try baseRequestDecodeData(data, for: type)
     }
@@ -44,7 +47,7 @@ final class WebService {
         return data
     }
     
-    private func baseRequestDecodeData<T: Codable>(_ data: Data, for type: T.Type) throws -> T {
+    private func baseRequestDecodeData<T: Decodable>(_ data: Data, for type: T.Type) throws -> T {
         do {
             let decoder = JSONDecoder()
             let result = try decoder.decode(T.self, from: data)

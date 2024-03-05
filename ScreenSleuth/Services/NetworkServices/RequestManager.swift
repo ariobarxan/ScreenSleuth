@@ -10,6 +10,7 @@ import Foundation
 enum RequestManager {
     
     case authenticate
+    case popularMovies(page: Int)
     
     func asURLRequest() throws -> URLRequest {
         guard let url = RequestURLManager.getURL(for: self) else {

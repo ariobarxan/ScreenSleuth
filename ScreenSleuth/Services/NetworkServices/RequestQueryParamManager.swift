@@ -12,9 +12,15 @@ enum RequestQueryParamManager {
 }
 
 extension RequestQueryParamManager {
-    static func getQueryParam(for request: RequestManager) -> [String: String]? {
+    static func getQueryParam(for request: RequestManager) -> [String: Any]? {
         switch request {
-        default:
+        case .popularMovies(let page):
+            return [
+                "language": "en-US",
+                "page": page,
+                "region": "AU" // Can changes based on the user loc
+            ]
+        case .authenticate:
             return nil
         }
     }

@@ -19,11 +19,8 @@ extension RequestMethodManager {
     
     static func getHTTPMethod(for request: RequestManager) -> String {
         switch request {
-        case .authenticate:
+        case .authenticate, .popularMovies:
             return RequestMethodManager.get.rawValue
-        default:
-            return RequestMethodManager.post.rawValue
-            
         }
     }
 }
