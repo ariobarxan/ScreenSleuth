@@ -35,3 +35,5 @@
 - [ ] Implement repository for web image
 - [ ] Implement Data Access Layer
 - [ ] Implement API for fetch Image
+- [ ] Implement Cache service for image
+
