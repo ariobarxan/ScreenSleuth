@@ -31,3 +31,4 @@
 - [ ] Implement Movie tableViewCell
 - [ ] Implement rating badge
 - [ ] Implement Movie Cell
+- [ ] Implement ImageView shows image from web
