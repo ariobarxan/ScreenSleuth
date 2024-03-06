@@ -15,7 +15,7 @@ final class WebService {
         return try await baseRequest(forRequest: .authenticate, type: Data.self)
     }
     
-    func getPopularMovies(forPage page: Int) async throws -> PopularMoviesPage {
+    func fetchPopularMovies(forPage page: Int) async throws -> PopularMoviesPage {
         return try await baseRequest(forRequest: .popularMovies(page: page), type: PopularMoviesPage.self)
     }
     

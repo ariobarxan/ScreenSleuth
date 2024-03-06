@@ -37,3 +37,6 @@
 - [ ] Implement API for fetch Image
 - [ ] Implement Cache service for image
 - [ ] Implement MovieTableViewDelegateAndDataSource
+- [ ] Implemenet SearchMovieViewModel
+- [ ] Implenment the viewModel to use combine
+- [ ] Implement the PopularMovie Repository 
