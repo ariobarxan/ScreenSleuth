@@ -25,6 +25,8 @@
 		F4C850292B981292002D4CB6 /* WebImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C850282B981292002D4CB6 /* WebImageViewModel.swift */; };
 		F4C8502D2B9815F7002D4CB6 /* WebImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C8502C2B9815F7002D4CB6 /* WebImageRepository.swift */; };
 		F4C850302B981DAB002D4CB6 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C8502F2B981DAB002D4CB6 /* ImageCacheService.swift */; };
+		F4C850332B98201E002D4CB6 /* MovieTableViewDelegateAndDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C850322B98201E002D4CB6 /* MovieTableViewDelegateAndDataSource.swift */; };
+		F4C850352B9828F0002D4CB6 /* SearchMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C850342B9828F0002D4CB6 /* SearchMovieViewModel.swift */; };
 		F4FC68912B9168C00012E8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC68902B9168C00012E8C4 /* AppDelegate.swift */; };
 		F4FC68932B9168C00012E8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC68922B9168C00012E8C4 /* SceneDelegate.swift */; };
 		F4FC68952B9168C00012E8C4 /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC68942B9168C00012E8C4 /* SearchMovieViewController.swift */; };
@@ -57,6 +59,8 @@
 		F4C850282B981292002D4CB6 /* WebImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageViewModel.swift; sourceTree = "<group>"; };
 		F4C8502C2B9815F7002D4CB6 /* WebImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageRepository.swift; sourceTree = "<group>"; };
 		F4C8502F2B981DAB002D4CB6 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
+		F4C850322B98201E002D4CB6 /* MovieTableViewDelegateAndDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewDelegateAndDataSource.swift; sourceTree = "<group>"; };
+		F4C850342B9828F0002D4CB6 /* SearchMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewModel.swift; sourceTree = "<group>"; };
 		F4FC688D2B9168C00012E8C4 /* ScreenSleuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenSleuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FC68902B9168C00012E8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4FC68922B9168C00012E8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +187,16 @@
 			path = CacheServices;
 			sourceTree = "<group>";
 		};
+		F4C850312B981EB1002D4CB6 /* SearchMovieViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4FC68942B9168C00012E8C4 /* SearchMovieViewController.swift */,
+				F4C850322B98201E002D4CB6 /* MovieTableViewDelegateAndDataSource.swift */,
+				F4C850342B9828F0002D4CB6 /* SearchMovieViewModel.swift */,
+			);
+			path = SearchMovieViewController;
+			sourceTree = "<group>";
+		};
 		F4FC68842B9168C00012E8C4 = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +262,7 @@
 		F4FC68A92B9170750012E8C4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F4FC68942B9168C00012E8C4 /* SearchMovieViewController.swift */,
+				F4C850312B981EB1002D4CB6 /* SearchMovieViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,7 +370,9 @@
 				F4FC68952B9168C00012E8C4 /* SearchMovieViewController.swift in Sources */,
 				F4FC68B42B9172DA0012E8C4 /* MainCoordinator.swift in Sources */,
 				F4C850302B981DAB002D4CB6 /* ImageCacheService.swift in Sources */,
+				F4C850332B98201E002D4CB6 /* MovieTableViewDelegateAndDataSource.swift in Sources */,
 				F4A8A2452B941AA5001F57BE /* WebService.swift in Sources */,
+				F4C850352B9828F0002D4CB6 /* SearchMovieViewModel.swift in Sources */,
 				F4C850292B981292002D4CB6 /* WebImageViewModel.swift in Sources */,
 				F4A8A2412B941A8B001F57BE /* RequestHeaderManager.swift in Sources */,
 				F4A8A23F2B941A45001F57BE /* RequestQueryParamManager.swift in Sources */,
