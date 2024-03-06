@@ -32,3 +32,6 @@
 - [ ] Implement rating badge
 - [ ] Implement Movie Cell
 - [ ] Implement ImageView shows image from web
+- [ ] Implement repository for web image
+- [ ] Implement Data Access Layer
+- [ ] Implement API for fetch Image

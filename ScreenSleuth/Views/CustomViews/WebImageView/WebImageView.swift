@@ -26,8 +26,8 @@ final class WebImageView: UIImageView {
             self.image = image
             //Log.d("Image was successfully downloaded")
         } catch {
-            //let image =
-           // self.image = image
+            let image = UIImage(resource: .posterPlaceHolder)
+            self.image = image
             //Log.d("Image could not be downloaded")
         }
     }
