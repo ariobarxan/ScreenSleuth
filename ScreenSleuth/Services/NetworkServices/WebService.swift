@@ -19,6 +19,10 @@ final class WebService {
         return try await baseRequest(forRequest: .popularMovies(page: page), type: PopularMoviesPage.self)
     }
     
+    func fetchImageData(withURLString urlString: String) async throws -> Data {
+        return try await baseRequestGetData(.image(url: urlString))
+    }
+    
     private func baseRequest<T: Decodable>(forRequest requestManager: RequestManager, type: T.Type) async throws -> T {
         let data = try await baseRequestGetData(requestManager)
         return try baseRequestDecodeData(data, for: type)

@@ -20,6 +20,8 @@ extension RequestURLManager {
     
     static func getURL(for request : RequestManager) -> URL? {
         switch request {
+        case .image(let url):
+            return URL(string: baseURL + url)
         case .popularMovies, .authenticate:
             return URL(string: RequestURLManager.baseURL + "popular?language=en-US&page=1")
         }

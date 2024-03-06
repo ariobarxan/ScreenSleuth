@@ -23,8 +23,6 @@ enum RequestHeaderManager {
 extension RequestHeaderManager {
     
     static func getHeader(for request: RequestManager) -> [(value: String, field: String)] {
-        
-        
         switch request {
         default:
             return  getDefaultHeaders()

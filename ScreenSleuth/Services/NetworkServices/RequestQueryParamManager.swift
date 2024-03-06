@@ -20,7 +20,7 @@ extension RequestQueryParamManager {
                 "page": page,
                 "region": "AU" // Can changes based on the user loc
             ]
-        case .authenticate:
+        case .authenticate, .image:
             return nil
         }
     }
