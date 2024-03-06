@@ -33,7 +33,4 @@ final class PopularMovieRepository: PopularMovieRepositoryProtocol {
         }
 
     }
-    
-    
-    
 }
