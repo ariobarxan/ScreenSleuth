@@ -28,3 +28,6 @@
 - [ ] Implement Network layer
 - [ ] Implement Network Monitoring
 - [ ] Implement a logger
+- [ ] Implement Movie tableViewCell
+- [ ] Implement rating badge
+- [ ] Implement Movie Cell
