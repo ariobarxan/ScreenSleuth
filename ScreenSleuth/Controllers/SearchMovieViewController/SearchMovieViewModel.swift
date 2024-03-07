@@ -14,6 +14,7 @@ final class SearchMovieViewModel {
     private var showError: (_ message: String) -> ()
     private var handleShowLoading: (Bool) -> ()
     var tableViewDataSource: [MovieTableViewCellViewModel] = []
+    var movies: [PopularMovie] = []
     var searchText: String = "" {
         didSet{
             searchForMovies(WithTitle: searchText)
@@ -37,6 +38,7 @@ final class SearchMovieViewModel {
         Task {
             do {
                 let popularMovies = try await getData()
+                self.movies = popularMovies
                 for movie in popularMovies {
                     let movieCell = MovieTableViewCellViewModel(movieId: movie.id, posterImageURLString: movie.posterString ?? "", title: movie.title, genresFirst: "")
                     tableViewDataSource.append(movieCell)
@@ -56,6 +58,7 @@ final class SearchMovieViewModel {
                 let searchedMovies = try await popularMovieRepository.fetchSearchMovies(contatingTitle: title)
                 // TODO: - Remove this, it's just for debugging purpose
                 tableViewDataSource.removeAll()
+                self.movies = searchedMovies
                 for movie in searchedMovies {
                     let movieCell = MovieTableViewCellViewModel(movieId: movie.id, posterImageURLString: movie.posterString ?? "", title: movie.title, genresFirst: "")
                     tableViewDataSource.append(movieCell)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F401411A2B995711001A3537 /* MovieTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40141192B995711001A3537 /* MovieTableViewCellViewModel.swift */; };
 		F401411C2B9963B4001A3537 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401411B2B9963B4001A3537 /* UITableViewCell.swift */; };
+		F420F0F72B99AD20004EBE5F /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420F0F62B99AD20004EBE5F /* DetailMovieViewController.swift */; };
 		F4A8A2392B941A1B001F57BE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A2382B941A1B001F57BE /* RequestManager.swift */; };
 		F4A8A23B2B941A28001F57BE /* RequestMethodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A23A2B941A28001F57BE /* RequestMethodManager.swift */; };
 		F4A8A23D2B941A34001F57BE /* RequestURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A23C2B941A34001F57BE /* RequestURLManager.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		F40141192B995711001A3537 /* MovieTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F401411B2B9963B4001A3537 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		F420F0F62B99AD20004EBE5F /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		F4A8A2382B941A1B001F57BE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		F4A8A23A2B941A28001F57BE /* RequestMethodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethodManager.swift; sourceTree = "<group>"; };
 		F4A8A23C2B941A34001F57BE /* RequestURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestURLManager.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F420F0F52B99ACF2004EBE5F /* DetailMovieViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F420F0F62B99AD20004EBE5F /* DetailMovieViewController.swift */,
+			);
+			path = DetailMovieViewController;
+			sourceTree = "<group>";
+		};
 		F4A8A2362B9419DF001F57BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +283,7 @@
 		F4FC68A92B9170750012E8C4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F420F0F52B99ACF2004EBE5F /* DetailMovieViewController */,
 				F4C850312B981EB1002D4CB6 /* SearchMovieViewController */,
 			);
 			path = Controllers;
@@ -386,6 +397,7 @@
 				F4C850332B98201E002D4CB6 /* MovieTableViewDelegateAndDataSource.swift in Sources */,
 				F4A8A2452B941AA5001F57BE /* WebService.swift in Sources */,
 				F4C850352B9828F0002D4CB6 /* SearchMovieViewModel.swift in Sources */,
+				F420F0F72B99AD20004EBE5F /* DetailMovieViewController.swift in Sources */,
 				F4C850292B981292002D4CB6 /* WebImageViewModel.swift in Sources */,
 				F4A8A2412B941A8B001F57BE /* RequestHeaderManager.swift in Sources */,
 				F4A8A23F2B941A45001F57BE /* RequestQueryParamManager.swift in Sources */,

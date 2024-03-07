@@ -10,7 +10,7 @@ import Combine
 
 class SearchMovieViewController: UIViewController, StoryBoarded {
 
-    weak var coordinator: Coordinator?
+    weak var coordinator: MainCoordinator?
 
     var cancellables: Set<AnyCancellable> = []
 
@@ -115,6 +115,12 @@ extension SearchMovieViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = viewModel.movies[indexPath.row]
+        
+        coordinator?.navigateToDetailMovieViewController(with: movie)
     }
 }
 

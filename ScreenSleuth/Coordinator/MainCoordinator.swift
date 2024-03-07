@@ -23,6 +23,12 @@ final class MainCoordinator: NSObject, Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func navigateToDetailMovieViewController(with movie: PopularMovie) {
+        let vc = DetailMovieViewController.instantiate(.Main)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func childDidFinish(_ child: Coordinator?) {
         for (index, coordinator) in childCoordinators.enumerated() {
             if coordinator === child {

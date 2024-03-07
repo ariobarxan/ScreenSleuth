@@ -42,3 +42,5 @@
 - [ ] Implement the PopularMovie Repository 
 - [ ] Implement MovieTableViewCellViewModel.
 - [ ] Implement the search functionality 
+- [ ] Setup Web Image view.
+- [ ] Navigation to Detailed ViewController.
