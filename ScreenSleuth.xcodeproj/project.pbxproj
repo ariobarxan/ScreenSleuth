@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F401411A2B995711001A3537 /* MovieTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40141192B995711001A3537 /* MovieTableViewCellViewModel.swift */; };
+		F401411C2B9963B4001A3537 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401411B2B9963B4001A3537 /* UITableViewCell.swift */; };
 		F4A8A2392B941A1B001F57BE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A2382B941A1B001F57BE /* RequestManager.swift */; };
 		F4A8A23B2B941A28001F57BE /* RequestMethodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A23A2B941A28001F57BE /* RequestMethodManager.swift */; };
 		F4A8A23D2B941A34001F57BE /* RequestURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8A23C2B941A34001F57BE /* RequestURLManager.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		F40141192B995711001A3537 /* MovieTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F401411B2B9963B4001A3537 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		F4A8A2382B941A1B001F57BE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		F4A8A23A2B941A28001F57BE /* RequestMethodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethodManager.swift; sourceTree = "<group>"; };
 		F4A8A23C2B941A34001F57BE /* RequestURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestURLManager.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FC68AF2B91727F0012E8C4 /* UIViewController.swift */,
+				F401411B2B9963B4001A3537 /* UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				F4AD1F3E2B95958500369ED4 /* PopularMoviesPage.swift in Sources */,
 				F4FC68912B9168C00012E8C4 /* AppDelegate.swift in Sources */,
 				F4AD1F3A2B9572E300369ED4 /* Logger.swift in Sources */,
+				F401411C2B9963B4001A3537 /* UITableViewCell.swift in Sources */,
 				F4C850272B981269002D4CB6 /* WebImageView.swift in Sources */,
 				F4C09BF02B96C071002259B3 /* MovieTableViewCell.swift in Sources */,
 				F4C850372B983C3F002D4CB6 /* PopularMovieRepository.swift in Sources */,

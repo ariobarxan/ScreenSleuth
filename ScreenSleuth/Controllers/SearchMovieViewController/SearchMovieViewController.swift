@@ -23,16 +23,6 @@ class SearchMovieViewController: UIViewController, StoryBoarded {
         
         setupViews()
         setupViewModel()
-        
-        Task {
-            do {
-                let popularMovies = try await viewModel.getData()
-                print("Dome")
-            }
-            catch let errr {
-                print(errr)
-            }
-        }
     }
 }
 
@@ -50,7 +40,9 @@ extension SearchMovieViewController {
     }
     
     private func setupMovieTableView() {
-        
+        MovieTableViewCell.register(for: movieTableView)
+        movieTableView.delegate = self
+        movieTableView.dataSource = self
     }
     
     private func setupSearchTextField() {
@@ -80,6 +72,8 @@ extension SearchMovieViewController {
             handleShowLoading: { [unowned self] shouldShowLoading in
                 self.handleShowLoading(shouldShowLoading: shouldShowLoading)
             })
+        
+        viewModel.fillTableViewDataSource()
     }
     
     func reloadTableView() {
@@ -97,12 +91,14 @@ extension SearchMovieViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.tableViewDataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
+        cell.setup(with: viewModel.tableViewDataSource[indexPath.row])
+        return cell
         
-        return UITableViewCell()
     }
 }
 

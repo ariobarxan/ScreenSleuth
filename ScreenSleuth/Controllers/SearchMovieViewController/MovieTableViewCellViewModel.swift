@@ -8,7 +8,7 @@
 import Foundation
 
 struct MovieTableViewCellViewModel {
-    
+    var movieId: Int
     var posterImageURLString: String
     var title: String
     var genresFirst: String
