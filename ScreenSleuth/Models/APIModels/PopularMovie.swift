@@ -10,14 +10,14 @@ import Foundation
 struct PopularMovie: Decodable {
     
     var adult: Bool
-    var backdropPath: String
+    var backdropPath: String?
     var genreIDs: [Int]
     var id: Int
     var originalLanguage: String
     var originalTitle: String
     var synopsis: String
     var popularity: Double
-    var posterString: String
+    var posterString: String?
     var title: String
     var rate: Double
     var voteCount: Int

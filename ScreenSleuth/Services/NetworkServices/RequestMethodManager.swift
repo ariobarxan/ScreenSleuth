@@ -19,7 +19,7 @@ extension RequestMethodManager {
     
     static func getHTTPMethod(for request: RequestManager) -> String {
         switch request {
-        case .authenticate, .popularMovies, .image:
+        case .authenticate, .popularMovies, .image, .serchMovieWith:
             return RequestMethodManager.get.rawValue
         }
     }

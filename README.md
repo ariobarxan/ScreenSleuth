@@ -41,3 +41,4 @@
 - [ ] Implenment the viewModel to use combine
 - [ ] Implement the PopularMovie Repository 
 - [ ] Implement MovieTableViewCellViewModel.
+- [ ] Implement the search functionality 

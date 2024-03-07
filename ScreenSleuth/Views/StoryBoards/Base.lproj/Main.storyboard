@@ -17,10 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUm-oO-wtd">
-                                <rect key="frame" x="0.0" y="50" width="393" height="70"/>
+                                <rect key="frame" x="0.0" y="80" width="393" height="70"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smF-Aw-a5T">
                                         <rect key="frame" x="16" y="5" width="361" height="60"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -35,7 +36,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c3m-cB-vWB">
-                                <rect key="frame" x="0.0" y="120" width="393" height="732"/>
+                                <rect key="frame" x="0.0" y="150" width="393" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -43,7 +44,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="c3m-cB-vWB" firstAttribute="top" secondItem="MUm-oO-wtd" secondAttribute="bottom" id="78l-s8-B0e"/>
-                            <constraint firstItem="MUm-oO-wtd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="NZX-AR-zIT"/>
+                            <constraint firstItem="MUm-oO-wtd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="NZX-AR-zIT"/>
                             <constraint firstAttribute="bottom" secondItem="c3m-cB-vWB" secondAttribute="bottom" id="Xxd-dz-ReT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3m-cB-vWB" secondAttribute="trailing" id="aS0-dj-M52"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUm-oO-wtd" secondAttribute="trailing" id="efR-Lu-q2H"/>
@@ -64,6 +65,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

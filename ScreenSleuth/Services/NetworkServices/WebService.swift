@@ -19,6 +19,10 @@ final class WebService {
         return try await baseRequest(forRequest: .popularMovies(page: page), type: PopularMoviesPage.self)
     }
     
+    func fetchMoview(withTitle title: String) async throws -> PopularMoviesPage {
+        return try await baseRequest(forRequest: .serchMovieWith(title: title), type: PopularMoviesPage.self)
+    }
+    
     func fetchImageData(withURLString urlString: String) async throws -> Data {
         return try await baseRequestGetData(.image(url: urlString))
     }

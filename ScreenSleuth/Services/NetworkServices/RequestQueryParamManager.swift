@@ -20,8 +20,14 @@ extension RequestQueryParamManager {
                 "page": page,
                 "region": "AU" // Can changes based on the user loc
             ]
+        case .serchMovieWith(let title):
+            return [
+                "query": title
+            ]
         case .authenticate, .image:
             return nil
+       
+            
         }
     }
 }

@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Combine
 
 class SearchMovieViewController: UIViewController, StoryBoarded {
 
     weak var coordinator: Coordinator?
-    
+
+    var cancellables: Set<AnyCancellable> = []
+
     @IBOutlet weak var headerContainer: UIView!
     @IBOutlet weak var movieTableView: UITableView!
     @IBOutlet weak var headerContainerTopConstraint: NSLayoutConstraint!
@@ -20,7 +23,6 @@ class SearchMovieViewController: UIViewController, StoryBoarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupViews()
         setupViewModel()
     }
@@ -46,7 +48,7 @@ extension SearchMovieViewController {
     }
     
     private func setupSearchTextField() {
-        
+        setupTextFieldPublisher()
     }
     
     private func showError(withMessage message: String) {
@@ -82,6 +84,17 @@ extension SearchMovieViewController {
         }
     }
     
+    func setupTextFieldPublisher() {
+       let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchTextField)
+       publisher
+           .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+           .map({($0.object as! UITextField).text})
+           .sink { [weak self] text in
+               self?.viewModel.searchText = text ?? ""
+           }
+       .store(in: &cancellables)
+   }
+    
 }
 
 // MARK: - TableView Functions
@@ -98,7 +111,6 @@ extension SearchMovieViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
         cell.setup(with: viewModel.tableViewDataSource[indexPath.row])
         return cell
-        
     }
 }
 

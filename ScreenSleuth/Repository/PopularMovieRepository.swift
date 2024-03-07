@@ -13,13 +13,13 @@ enum RepositoryError: Error {
 
 protocol PopularMovieRepositoryProtocol {
     func fetchPopularMovies(forPage page: Int) async throws -> [PopularMovie]
+    func fetchSearchMovies(contatingTitle title: String) async throws -> [PopularMovie]
 }
 
 final class PopularMovieRepository: PopularMovieRepositoryProtocol {
     
     private var popularMoviePage: PopularMoviesPage!
     private var hasNextPage: Bool = true
-
     
     func fetchPopularMovies(forPage page: Int) async throws -> [PopularMovie] {
         if hasNextPage {
@@ -33,4 +33,13 @@ final class PopularMovieRepository: PopularMovieRepositoryProtocol {
         }
 
     }
+    
+    func fetchSearchMovies(contatingTitle title: String) async throws -> [PopularMovie] {
+        popularMoviePage = try await WebService.shared.fetchMoview(withTitle: title)
+        guard let movies = popularMoviePage.results else {
+            throw RepositoryError.noData
+        }
+        return movies
+    }
+    
 }

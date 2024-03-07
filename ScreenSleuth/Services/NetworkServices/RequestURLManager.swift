@@ -11,7 +11,7 @@ enum RequestURLManager {
     
     static var baseURL: String {
         get {
-            return "https://api.themoviedb.org/3/movie/"
+            return "https://api.themoviedb.org/3/"
         }
     }
 }
@@ -23,7 +23,9 @@ extension RequestURLManager {
         case .image(let url):
             return URL(string: baseURL + url)
         case .popularMovies, .authenticate:
-            return URL(string: RequestURLManager.baseURL + "popular?language=en-US&page=1")
+            return URL(string: RequestURLManager.baseURL + "movie/popular?language=en-US&page=1")
+        case .serchMovieWith(let title):
+            return URL(string: RequestURLManager.baseURL + "search/movie")
         }
     }
 }
