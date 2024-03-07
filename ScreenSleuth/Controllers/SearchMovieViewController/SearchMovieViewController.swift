@@ -112,5 +112,9 @@ extension SearchMovieViewController: UITableViewDelegate, UITableViewDataSource 
         cell.setup(with: viewModel.tableViewDataSource[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250.0
+    }
 }
 

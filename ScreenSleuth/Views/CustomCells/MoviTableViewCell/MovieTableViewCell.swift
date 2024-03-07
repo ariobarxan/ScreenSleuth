@@ -35,7 +35,7 @@ final class MovieTableViewCell: UITableViewCell {
     }
     
     private func setupPosterImage() {
-        
+        posterImage.setup(withURLString: viewModel?.posterImageURLString ?? "")
     }
     
     private func setupTitleLabel() {
