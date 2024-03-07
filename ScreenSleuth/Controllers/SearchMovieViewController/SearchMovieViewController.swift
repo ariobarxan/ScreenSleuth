@@ -23,6 +23,16 @@ class SearchMovieViewController: UIViewController, StoryBoarded {
         
         setupViews()
         setupViewModel()
+        
+        Task {
+            do {
+                let popularMovies = try await viewModel.getData()
+                print("Dome")
+            }
+            catch let errr {
+                print(errr)
+            }
+        }
     }
 }
 
