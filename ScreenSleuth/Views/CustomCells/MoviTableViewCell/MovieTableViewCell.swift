@@ -36,6 +36,7 @@ final class MovieTableViewCell: UITableViewCell {
     
     private func setupPosterImage() {
         posterImage.setup(withURLString: viewModel?.posterImageURLString ?? "")
+        posterImage.dropShadowAndCornerRadius(.large)
     }
     
     private func setupTitleLabel() {

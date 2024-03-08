@@ -44,3 +44,4 @@
 - [ ] Implement the search functionality 
 - [ ] Setup Web Image view.
 - [ ] Navigation to Detailed ViewController.
+- [ ] Implement the detail Movie ViewController.
